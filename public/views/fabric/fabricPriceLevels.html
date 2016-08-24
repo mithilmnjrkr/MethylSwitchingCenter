@@ -1,0 +1,76 @@
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+
+    <div class="ibox-content m-b-sm border-bottom">
+        <div class="row">
+            <form method="post" ng-submit = "createFabricPriceLevel()">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label class="control-label" for="product_name">Price Per Meter</label>
+                        <input type="text"  ng-model = 'fabric_price_level.price_per_meter' placeholder="" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label class="control-label" for="price">Price Per Shirt</label>
+                        <input type="text" ng-model = 'fabric_price_level.price_per_shirt' placeholder="" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label class="control-label" for="price">&nbsp;</label>
+                    <button class="btn-block btn btn-primary btn-outline" 
+                        type="submit">
+                        Create New
+                    </button>
+                </div>   
+            </form>                    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th data-hide="phone,tablet" >ID</th>
+                                <th data-toggle="true">Price Per Meter</th>
+                                <th data-hide="phone">Price Per Shirt</th>
+                                <th data-hide="all">Created at</th>
+                                <th data-hide="phone">Updated at</th>
+                                <th class="text-right" data-sort-ignore="true">Action</th>
+                            </tr>
+                            </thead>                            
+                            <tbody>
+                                <tr ng-repeat="fabric_price_level in fabric_price_levels track by $index">
+                                    <td class="project-status">
+                                        <span ng-bind = 'fabric_price_level.id'></span>
+                                    </td>
+                                    <td class="project-title">
+                                        <span ng-bind = 'fabric_price_level.price_per_meter'></span>
+                                    </td>
+                                    <td class="project-title">
+                                        <span ng-bind = 'fabric_price_level.price_per_shirt'></span>
+                                    </td>
+                                    <td class="project-title">
+                                        <span ng-bind = 'fabric_price_level.created_at'></span>
+                                    </td>
+                                    <td class="project-title">
+                                        <span ng-bind = 'fabric_price_level.updated_at'></span>
+                                    </td>                                    
+                                    <td class="project-actions">
+                                        <a href="" class="btn btn-success btn-outline btn-sm"><i class="fa fa-pencil"></i> </a>
+                                        <a ng-click = "deleteFabricPriceLevel(fabric_price_level.id)" class="btn btn-danger btn-outline btn-sm"><i class="fa fa-times"></i> </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

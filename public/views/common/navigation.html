@@ -1,0 +1,64 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header" style="background:black;">
+                <div class="profile-element" uib-dropdown>
+                    <span>
+                        <a ui-sref="dashboards.dashboard"><img alt="image" class="" src="img/logo/logo_inverse_150px.png"></a>
+                    </span>
+                </div>
+                <div class="logo-element">
+                    <span>
+                        <a  ui-sref="dashboards.dashboard"><img alt="image" class="" src="img/logo/logo_inverse_sartor_only_small.png"></a>
+                    </span>                    
+                </div>
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="dashboards.dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">
+                    Dashboard
+                </span> </a>
+            </li>            
+            <li ng-if='admin' ui-sref-active="active">
+                <a ui-sref="dashboards.organization.all"><i class="fa fa-desktop"></i> <span class="nav-label">
+                    Organization
+                </span> </a>                
+            </li>
+
+            <li ng-if='admin' ui-sref-active="active">
+                <a href=""><i class="fa fa-diamond"></i> <span class="nav-label">Fabric</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li ng-if='admin'><a ui-sref="dashboards.fabrics.priceLevel">Price Levels</a></li>
+                    <li><a ui-sref="dashboards.fabrics.all">Fabrics</a></li>
+                </ul>
+            </li>
+            <li ng-if='admin' ui-sref-active="active">
+                <a href=""><i class="fa fa-pie-chart"></i> <span class="nav-label">Feature</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                	<li><a ui-sref="dashboards.features.feature_group">Feature Groups</a></li>
+                    <li><a ui-sref="dashboards.features.new">Features</a></li>
+                    <li><a ui-sref="dashboards.features.feature_options">Feature Options</a></li>
+                </ul>                
+            </li>
+            <li ng-if='orgAdmin' ui-sref-active="active">
+                <a ui-sref="dashboards.locations.all"><i class="fa fa-location-arrow"></i> <span class="nav-label">Location</span> </a>
+            </li>            
+            <li ng-if='orgAdmin' ui-sref-active="active">
+                <a ui-sref="dashboards.users.all"><i class="fa fa-user"></i> <span class="nav-label">User</span> </a>
+            </li>
+            <li ng-if='orgAdmin || user' ui-sref-active="active">
+                <a ui-sref="dashboards.customers.all"><i class="fa fa-users"></i> <span class="nav-label">Customer</span> </a>
+            </li>         
+            <li ng-if='orgAdmin || user' ui-sref-active="active">
+               
+                <a ui-sref="dashboards.fabrics.all"> <i class="fa fa-diamond"></i> <span class="nav-label">
+                    Fabrics
+                </span></a>
+                
+            </li>               
+<!--             <li ng-if='orgAdmin || user' ui-sref-active="active">
+                <a ui-sref="dashboards.make_order"><i class="fa fa-shopping-cart"></i> <span class="nav-label">Order</span> </a>
+            </li>  -->           
+        </ul>
+    </div>
+</nav>

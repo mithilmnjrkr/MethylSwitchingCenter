@@ -1,0 +1,109 @@
+<div class="ibox">    
+    <div class="ibox-content m-b-sm border-bottom" ng-init = "getDetailedProfile();">    
+        <form>            
+            <div class="row">
+                <div class="col-sm-12">  
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label">Profile Name</label>
+                                    <input type="text" class="form-control" ng-model = 'profile.name'>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Weight</label>
+                                    <input type="text" class="form-control" ng-model = 'profile_version.weight'>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Height</label>
+                                    <input type="text" class="form-control" ng-model = 'profile_version.height_ft'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label">Notes</label>
+                                    <textarea class="form-control" ng-model = 'profile_version.notes' rows = "4"></textarea>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Chest</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.chest'>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Collar</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.collar'>
+                        </div> 
+                        <div class="form-group">
+                            <label class="control-label">Tucked Length</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.length'>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Shoulders</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.shoulder'>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Sleeves</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.sleeve'>
+                        </div>  
+                        <div class="form-group">
+                            <label class="control-label">Hips</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.hip'>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="col-sm-6">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Bicep</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.bicep'>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Neck</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.neck'>
+                        </div>    
+                        <div class="form-group">
+                            <label class="control-label">Waist</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.waist'>
+                        </div> 
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Wrist</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.wrist'>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Wrist Watch</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.wrist_watch'>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Wrist Hand</label>
+                            <input type="text" class="form-control" ng-model = 'profile_version.watch_hand'>
+                        </div>                        
+                    </div>                    
+                </div>
+
+
+                <div class="col-sm-12">
+                    <div class="form-group  pull-right">
+                        <button class="btn btn-white" type="button" ui-sref="dashboards.customer.show">Cancel</button>
+                        <button id="save_profile" class="btn btn-primary btn-outline" ng-click = "createProfile();" ng-hide = "update_profile">Save</button>
+                        <button id="update_profile" class="btn btn-primary btn-outline" ng-click = "updateProfile();" ng-show = "update_profile">Update</button>
+                    </div>
+                </div>
+            </div>                 
+        </form>
+    </div>
+</div>

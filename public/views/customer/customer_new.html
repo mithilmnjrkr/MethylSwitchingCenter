@@ -1,0 +1,47 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class = "row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 white-bg section-padding">
+            <form method="post" ng-submit = "createCustomer()" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="control-label">Name</label>
+                    <input type="text" class="form-control" ng-model = 'customer.name'>
+                </div>                
+                <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <input type="text" class="form-control" ng-model = 'customer.email'>
+                </div>        
+
+                <div class="form-group">
+                  <label for = "ship_direct">Ship Direct ?</label>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="customer[ship_direct]" id="options_ship_direct1" value="1" class: 'form-control' 
+                        ng-model = 'customer.ship_direct'>
+                        Yes
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="customer[ship_direct]" id="options_ship_direct2" value="0" class: 'form-control' 
+                        ng-model = 'customer.ship_direct' checked>
+                        No
+                      </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Direct Ship Address</label>
+                        <input type="text" class="form-control" ng-model = 'customer.direct_ship_address'>
+                </div>  
+                <div class="form-group">
+                    <label class="control-label">Direct Ship Phone</label>
+                        <input type="text" class="form-control" ng-model = 'customer.direct_ship_phone'>
+                </div>               
+
+                <div class="form-group  pull-right">
+                    <button class="btn btn-white" type="button" ui-sref="dashboards.customers.all">Cancel</button>
+                    <button class="btn btn-primary btn-outline" type="submit">Save</button>
+                </div>                
+            </form>  
+        </div>
+    </div>
+</div>

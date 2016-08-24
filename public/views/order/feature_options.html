@@ -1,0 +1,34 @@
+<div class="wrapper wrapper-content white-bg animated fadeInRight" ng-init="getFeatureOptions()">
+	<div class="row">
+		<div class="col-xs-12">
+		    <div class="input-group" style="margin-bottom:5px;">
+		    	<span class="input-group-btn">
+		    		<button ui-sref="dashboards.order.new.line_item.fabrics_features" class="btn btn-white btn-outline btn-sm" style="margin-right:5px;"><i class="fa fa-arrow-left"></i></button>
+		    	</span>		    	
+		    	<input type="text" placeholder="Search Collar" class="input-sm form-control"> 
+		    	<span class="input-group-btn">
+		    		<button type="button" class="btn btn-sm btn-primary btn-outline">
+		    			<i class="fa fa-search"></i> Search
+		    		</button>
+		    	</span>
+			</div>
+		</div>		
+
+		<div class="col-xs-12" ng-repeat="feature_option in feature_options track by $index">
+		    <div class="choice-box"  ng-class="{active: line_item.feature[feature_option.feature_id] == feature_option.code}">
+ 				<label class="list-item">
+		        	<input type="radio" ng-model="line_item.feature[feature_option.feature_id]" ng-value="feature_option.code" class="hide" ng-click="feature_option_item()">
+		            <div class="col-sm-5">
+		                <img alt="image" class="img-circle m-t-xs img-responsive" ng-src={{feature_option.image}}>
+		            </div>
+		            <div class="col-sm-7">
+		                <h3><strong ng-bind="feature_option.name"></strong></h3>
+
+		                <p ng-bind="feature_option.description"></p>
+		            </div>
+		            <div class="clearfix"></div>
+		  		</label>
+		    </div>
+		</div>
+	</div>
+</div>

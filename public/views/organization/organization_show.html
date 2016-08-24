@@ -1,0 +1,152 @@
+<div class="row">
+    <div class="col-lg-9">
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="m-b-md">
+                                <a href="" class="btn btn-success btn-outline btn-xs pull-right"><i class="fa fa-pencil"></i></a>
+
+                                <h2 ng-bind = 'organization.detail.name'></h2>
+
+                            </div>
+                            <dl class="dl-horizontal">
+                                <dt>Status:</dt>
+                                <dd><span class="label label-primary">Active</span></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <dl class="dl-horizontal">
+
+                                <dt>Created by:</dt>
+                                <dd>Alex Smith</dd>
+                                <dt>Messages:</dt>
+                                <dd> 162</dd>
+                                <dt>Client:</dt>
+                                <dd><a href="" class="text-navy"> Zender Company</a></dd>
+                                <dt>Version:</dt>
+                                <dd> v1.4.2</dd>
+                            </dl>
+                        </div>
+                        <div class="col-lg-7" id="cluster_info">
+                            <dl class="dl-horizontal">
+
+                                <dt>Last Updated:</dt>
+                                <dd ng-bind = 'organization.detail.updated_at'></dd>
+                                <dt>Created:</dt>
+                                <dd ng-bind = 'organization.detail.created_at'></dd>
+                            </dl>
+                        </div>
+                    </div>
+                        <div class="row m-t-sm">
+                            <div class="col-lg-12">
+                                <div class="panel blank-panel ui-tab">
+                                    <uib-tabset>
+                                        <uib-tab heading="Users" active="tab.active">
+                                            <div class="feed-activity-list">
+                                                <div class="feed-element" ng-repeat="user in organization.users track by $index">
+                                                    <a href="" class="pull-left">
+                                                        <img alt="image" class="img-circle" src="img/a4.jpg">
+                                                    </a>
+
+                                                    <div class="media-body ">
+                                                        <small class="pull-right text-navy"><a class="btn btn-xs btn-danger btn-outline" ng-click = "deleteUser(user.id)"><i class="fa fa-times"></i> </a></small>
+                                                        <strong ng-bind = 'user.email'></strong> 
+                                                        <br>
+                                                        <small class="text-muted" ng-bind = 'user.updated_at'></small>
+                                                        <br>
+                                                        <strong class="text-muted" ng-bind = 'user.role'></strong>                    
+                                                        <div class="actions">
+                                                            <a class="btn btn-xs btn-warning btn-outline"><i class="fa fa-folder"></i> </i> </a>
+                                                            <a class="btn btn-xs btn-success btn-outline"><i class="fa fa-pencil"></i></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>       
+                                        </uib-tab>                                    
+                                        <uib-tab heading="Orders">
+                                            <div class="feed-activity-list">
+                                                <div class="feed-element">
+                                                    <div class="media-body ">
+                                                        <small class="pull-right text-navy"><a class="btn btn-xs btn-danger btn-outline" ng-click = "deleteUser(user.id)"><i class="fa fa-times"></i> </a></small>
+                                                        <strong>NY Outlet</strong> 
+                                                        <br>
+                                                        <small class="text-muted">112 W 27TH ST STE 502 NEW YORK, NY 10001</small>
+                                                        <br>
+                                                        <small class="text-muted">87564594598</small>  
+                                                        <br>
+                                                        <strong class="text-muted">7 Line Items</strong>                  
+                                                        <div class="actions">
+                                                            <a class="btn btn-xs btn-warning btn-outline"><i class="fa fa-folder"></i> </a>
+                                                            <a class="btn btn-xs btn-success btn-outline"><i class="fa fa-pencil"></i></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </uib-tab>
+                                        <uib-tab heading="Locations">
+                                            <div class="feed-activity-list">
+                                                <div class="feed-element" ng-repeat="location in organization.locations track by $index">
+                                                    <div class="media-body ">
+                                                        <small class="pull-right text-navy"><a class="btn btn-xs btn-danger btn-outline" ng-click = "deleteLocation(location.id)"><i class="fa fa-times"></i> </a></small>
+                                                        <strong ng-bind="location.name"></strong> 
+                                                        <br>
+                                                        <small class="text-muted" ng-bind="location.address"></small>
+                                                        <br>
+                                                        <small class="text-muted" ng-bind="location.phone">87564594598</small>                    
+                                                        <div class="actions">
+                                                            <a class="btn btn-xs btn-warning btn-outline"><i class="fa fa-folder"></i> </a>
+                                                            <a class="btn btn-xs btn-success btn-outline"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                        </uib-tab>
+                                    </uib-tabset>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="modal" id="user_form" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content animated fadeIn">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title  fadeOut" id="gridSystemModalLabel">Add User</h4>
+            </div>      
+            <div class="modal-body">
+                <div class = "row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                        <form method="post" ng-submit = "createOrganization()">
+                            <div class="form-group">
+                                <label class="control-label">Name</label>
+                                <input type="text" class="form-control" ng-model = 'user.name'>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Email</label>
+                                    <input type="text" class="form-control" ng-model = 'user.email'>
+                            </div>
+                            <div class="hr-line-dashed"></div>                
+                            <div class="form-group">
+                                <label class="control-label">Password</label>
+                                <input type="password" class="form-control" ng-model = 'user.password'>
+                            </div>
+                            <div class="form-group  pull-right">
+                                <button class="btn btn-white" type="button" data-dismiss="modal">Cancel</button>
+                                <button class="btn btn-primary btn-outline" type="submit">Save</button>
+                            </div>                
+                        </form>  
+                    </div>
+                </div>
+            </div>      
+        </div>
+      </div>
+    </div>

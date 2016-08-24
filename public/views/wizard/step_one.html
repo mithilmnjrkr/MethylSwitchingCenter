@@ -1,0 +1,73 @@
+<div class="wrapper wrapper-content white-bg animated fadeInRight" style="padding-left:0;padding-right:0;">
+    <div class="row" ng-init = "getOrder();">
+        <div class="col-xs-12">
+
+            <div class="ibox">
+                <div class="ibox-title-small">
+                    <span class="pull-right">
+                        (<strong ng-bind="current_line_items.length"></strong>) items 
+                    </span>
+                </div>
+                <div class="ibox-content" ng-repeat="line_item in current_line_items track by $index">
+                    <div class="col-sm-12 less-padding">
+                        <div class="col-sm-2 less-padding">
+                            <img alt="image" class="m-t-xs" ng-src="{{line_item.main_fabric_image}}">
+                        </div>
+                        <div class="col-sm-8 col-md-9 less-padding desc">
+                            <div class="col-sm-6 less-padding">
+                                <h4 class="text-navy">
+                                    1112/01 - New Lyon Melange
+                                </h4>
+                                <dl class="small m-b-none">
+                                    <dt>Profile</dt>
+                                    <dd>Dress Tucked</dd>
+                                </dl>
+                                <div class="m-t-sm">
+                                    <a ui-sref="dashboards.order.new.line_item.fabrics_features" class="text-muted"><i class="fa fa-pencil"></i> 
+                                        Edit
+                                    </a>
+                                    |
+                                    <a class="text-muted"><i class="fa fa-trash"></i> 
+                                        Remove item
+                                    </a>
+                                </div>                                  
+                            </div>
+                            <div class="col-sm-6 less-padding ">
+                                <div class="table-responsive">
+                                    <table class="custom-table borderless">                                     
+                                        <tr ng-repeat="feature_configuration in line_item.feature_configurations track by $index">
+                                            <td> 
+                                                {{feature_configuration.code}} [{{feature_configuration.name}}]
+                                            </td>
+                                        </tr>
+                                    </table>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-1 less-padding text-right">
+                            <h4>
+                                $180,00
+                            </h4>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-content text-right" style="padding:10px 20px;">
+                    <h3>
+                      Total&nbsp;&nbsp;&nbsp;&nbsp; 
+                    </h3>                    
+                </div>
+                <div class="ibox-content text-right">
+                    <a ng-click="createNewLineItem()" class="btn btn-primary btn-outline">
+                        Add Shirt
+                    </a>
+                    <a ng-click = "deleteOrder(order_id);" class="btn btn-primary btn-outline">
+                        Cancel
+                    </a>                    
+                    <a ui-sref="dashboards.order.new.line_items.step_two" class="btn btn-primary btn-outline">
+                        Next
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

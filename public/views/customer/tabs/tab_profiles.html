@@ -1,0 +1,40 @@
+<div class="">
+    <div class="ibox">
+        <div class="ibox-title none-border">
+            <div class="ibox-tools">
+                <a ui-sref="dashboards.customer.new_profile" class="btn btn-primary btn-outline btn-sm">Create new profile</a>
+            
+                <a ui-sref="dashboards.customer.new_shirt_profile" class="btn btn-primary btn-outline btn-sm">Create new shirt profile</a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row m-b-sm m-t-sm">
+                <div class="col-md-12">
+                    <div class="input-group"><input type="text" placeholder="Search Profile" class="input-sm form-control"> <span class="input-group-btn">
+                    <button type="button" class="btn btn-sm btn-primary btn-outline"><i class="fa fa-search"></i> Search</button> </span></div>
+                </div>
+            </div>
+
+            <div class="project-list table-responsive">
+
+                <table class="table table-hover">
+                    <tbody>
+                        <tr ng-repeat="profile in customer.profiles track by $index">
+                            <td class="project-title">
+                                <a ng-click = "getDetailCustomer(customer.id)" ng-bind = 'profile.name'></a>
+                                <br/>
+                                Active Version : <small ng-bind = 'profile.active_version'></small>
+                            </td>
+
+                            <td class="project-actions">
+                                <a ui-sref = "dashboards.customer.show_profile({profile: profile.id})" class="btn btn-warning btn-outline btn-sm"><i class="fa fa-folder"></i></a>
+                                <a ui-sref = "dashboards.customer.edit_profile({profileId: profile.id})" class="btn btn-success btn-outline btn-sm"><i class="fa fa-pencil"></i></a>
+                                <a ng-click = "deleteProfile(profile.id)" class="btn btn-danger btn-outline btn-sm"><i class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

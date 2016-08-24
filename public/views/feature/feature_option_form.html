@@ -1,0 +1,111 @@
+<div class="wrapper wrapper-content animated fadeInRight ecommerce" ng-init = getAllFeatures();>
+    <div class="ibox animated fadeInDown" ng-show = "showNewFeatureOptionForm">
+        <div class="ibox-title">
+            <h5>Feature Option</h5>
+            <div class="ibox-tools">
+                <a ng-click = "showNewFeatureOptionForm = false" class="btn btn-danger btn-outline btn-xs">
+                    <i class="fa fa-close"></i>
+                </a>
+            </div>            
+        </div>
+        <div class="ibox-content m-b-sm border-bottom">
+            <form method="post" ng-submit = "createFeatureOption()" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="product_name">Code</label>
+                            <input type="text"  ng-model = 'feature_option.code' placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="product_name">Name</label>
+                            <input type="text"  ng-model = 'feature_option.name' placeholder="" class="form-control">
+                        </div>
+                    </div>                
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="price">Short Label</label>
+                            <input type="text" ng-model = 'feature_option.short_label' placeholder="" class="form-control">
+                        </div>
+                    </div> 
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="price">Description</label>
+                            <input type="text" ng-model = 'feature_option.description' placeholder="" class="form-control">
+                        </div>
+                    </div>                 
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="price">Feature</label>
+                            <select name="feature" id="feature"
+                              ng-options="feature.name for feature in allFeatures track by feature.id"
+                              ng-model="allData.selectedFeature" class="form-control">
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="price">Image</label>
+                            <input type="file" file-model = "image.avtar" class="form-control" accept="image/*" image="image">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="control-label" for="price">&nbsp;</label>
+                        <button class="btn btn-primary btn-outline btn-block" 
+                            type="submit">
+                            Create New
+                        </button>
+                    </div>          
+                </div>            
+            </form> 
+        </div>
+    </div>
+
+    <div class="ibox" ng-init="getAllFeatureOptions()">
+        <div class="ibox-title">
+            <h5>Feature Options</h5>
+
+            <div class="ibox-tools">
+                <a ng-click = "showNewFeatureOptionForm = true" class="btn btn-primary btn-outline btn-sm">Create Feature Option</a>
+            </div>
+        </div>        
+        <div class="ibox-content">
+            <div class="serach-section">
+                <div class="input-group">
+                    <input type="text" placeholder="Search Feature" ng-model= "serachFeatureOptioin" class="input-sm form-control">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-sm btn-primary btn-outline">
+                            <i class="fa fa-search"></i> Search
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="project-list">
+
+                <table class="table table-hover">
+                    <tbody>
+                        <tr ng-repeat="feature_option in allFeatureOptions |filter: serachFeatureOptioin track by $index">
+                            <td class="project-title">
+                                <a ng-bind = 'feature_option.short_label'></a>
+                            </td>
+                            <td class="project-title">
+                                <a ng-bind = 'feature_option.name'></a>
+                            </td>   
+                            <td class="project-title">
+                                <a ng-bind = 'feature_option.description'></a>
+                            </td>
+                            <td class="project-actions">
+                                <a ng-click = "getDetailOrganization(organization.id)" class="btn btn-warning btn-outline btn-sm"><i class="fa fa-folder"></i></a>
+                                <a href="" class="btn btn-success btn-outline btn-sm"><i class="fa fa-pencil"></i> </a>
+                                <a ng-click = "deleteFeatureOption(feature_option.id)" class="btn btn-danger btn-outline btn-sm"><i class="fa fa-times"></i> </a>                               
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>     
+</div>

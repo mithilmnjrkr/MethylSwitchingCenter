@@ -1,0 +1,74 @@
+<div class=" animated fadeInRight" ng-init = "getAllGroupsDetail()">
+	<div class="ibox-title-small col-md-12" style="padding-left:0;">
+		<h3>Fabrics</h3>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="feature-box">
+				<div class="feature">
+					<a ui-sref="dashboards.order.new.line_item.fabrics">
+
+						<div class="image">
+							<img alt="image" class="img-responsive img-fabric" ng-src="{{fabricImages[line_item.main_fabric]}}">
+						</div>
+						<div class="feature-name">
+							Main Fabric
+							<br>
+							<small ng-bind = 'line_item.main_fabric'></small>
+
+						</div>
+					</a>
+				</div>
+			</div> 
+			<div class="feature-box">
+				<div class="feature">
+					<a ui-sref="dashboards.order.new.line_item.fabrics_accent">
+
+						<div class="image">
+							<img alt="image" class="img-responsive img-fabric" ng-src="{{fabricImages[line_item.accent_fabric]}}">
+						</div>
+						<div class="feature-name">
+							Accent Fabric
+							<br>
+							<small ng-bind = 'line_item.accent_fabric'></small>
+
+						</div>
+					</a>
+				</div>
+			</div>
+		</div> 
+	</div>
+	<div ng-repeat = "group in groups track by $index" ng-if = 'group.features.length > 0 '>
+		<div class="ibox-title-small" style="padding-left:0;">
+			<h3 ng-bind="group.name"></h3>
+		</div>
+		<div class="">
+			<div class="col-xs-12">
+				<div class="feature-box" ng-repeat = "feature in group.features track by $index">
+					<div class="feature">
+						<a ng-click="selectFeature(feature.feature_options)" ng-if = 'feature.feature_options.length > 0'>
+							<div class="image">
+								<img alt="image" class="img-responsive img-feature" ng-src="{{feature.feature_options[0].image}}">
+							</div>
+							<div class="feature-name">
+								<span ng-bind="feature.name"></span>
+								<br>
+								<small ng-bind = "line_item.feature[feature.id]"></small>
+							</div>
+						</a>
+						<a href="" ng-if = 'feature.feature_options.length == 0'>
+							<div class="text-center">
+								No Feature Option Added
+							</div>
+							<div class="feature-name">
+								<span ng-bind="feature.name"></span>
+								<br>
+								<small ng-bind = "line_item.feature[feature.id]"></small>
+							</div>		
+						</a>				
+					</div>
+				</div>										
+			</div>
+		</div>
+	</div>
+</div>

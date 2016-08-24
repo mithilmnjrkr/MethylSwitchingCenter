@@ -1,0 +1,97 @@
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+    <div class="ibox animated fadeInDown" ng-show = "showNewFeatureForm">
+        <div class="ibox-title">
+            <h5>New Feature</h5>
+            <div class="ibox-tools">
+                <a ng-click = "showNewFeatureForm = false" class="btn btn-danger btn-outline btn-xs">
+                    <i class="fa fa-close"></i>
+                </a>
+            </div>            
+        </div>
+        <div class="ibox-content m-b-sm border-bottom"  ng-init = "getAllGroup()">
+            <form method="post" ng-submit = "createFeature()">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="product_name">Code</label>
+                            <input type="text"  ng-model = 'feature.code' placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="price">Group</label>
+                            <select name="feature_group" id="feature_group"
+                              ng-options="feature_group.name for feature_group in group.feature_groups track by feature_group.id"
+                              ng-model="group.selectedGroup" class="form-control">
+                            </select>
+                        </div>
+                    </div>          
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="product_name">Name</label>
+                            <input type="text"  ng-model = 'feature.name' placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="price">Short Label</label>
+                            <input type="text" ng-model = 'feature.short_label' placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="control-label" for="price">&nbsp;</label>
+                        <button class="btn btn-primary btn-outline btn-block" 
+                            type="submit">
+                            Create New
+                        </button>
+                    </div>          
+                </div>            
+            </form> 
+        </div>
+    </div>
+
+    <div class="ibox" ng-init="getAllFeatures()">
+        <div class="ibox-title">
+            <h5>Features</h5>
+
+            <div class="ibox-tools">
+                <a ng-click = "showNewFeatureForm = true" class="btn btn-primary btn-outline btn-sm">Create Feature</a>
+            </div>
+        </div>         
+        <div class="ibox-content">
+            <div class="serach-section">
+                <div class="input-group">
+                    <input type="text" placeholder="Search Feature" ng-model="seachfeature" class="input-sm form-control"> 
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-sm btn-primary btn-outline">
+                            <i class="fa fa-search"></i> Search
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="project-list">
+
+                <table class="table table-hover">
+                    <tbody>
+                        <tr ng-repeat="feature in allFeatures | filter: seachfeature track by $index">
+                            <td class="project-title">
+                                <a ng-click = "getDetailOrganization(organization.id)" ng-bind = 'feature.short_label'></a>
+                            </td>
+                            <td class="project-title">
+                                <a ng-click = "getDetailOrganization(organization.id)" ng-bind = 'feature.name'></a>
+                            </td>                            
+                            <td class="project-actions">
+                                <a ng-click = "getDetailOrganization(organization.id)" class="btn btn-warning btn-outline btn-sm"><i class="fa fa-folder"></i> </a>
+                                <a href="" class="btn btn-success btn-outline btn-sm"><i class="fa fa-pencil"></i> </a>
+                                <a ng-click = "deleteFeature(feature.id)" class="btn btn-danger btn-outline btn-sm"><i class="fa fa-times"></i> </a>                         
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>    
+</div>

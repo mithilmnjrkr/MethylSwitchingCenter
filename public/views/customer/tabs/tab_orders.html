@@ -1,0 +1,93 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="ibox">
+		    <div class="ibox-title none-border">
+		        <div class="ibox-tools">
+					<a ng-click = 'createOrder()' class="btn btn-primary btn-outline btn-sm">Create new Order</a>
+		        </div>
+		    </div>
+		    <!-- Start Order -->
+		    <div class="ibox-content" ng-repeat="order in orders track by $index">
+		        <div class="col-sm-12 less-padding">
+		        	<div class="col-sm-12">
+		        		<h4>Order <span ng-bind = 'order.order.id'></span></h4>
+		        		<small class="pull-right text-navy">
+		        			<a class="btn btn-xs btn-danger btn-outline" ng-click = "deleteOrder(order.order.id)" data-toggle="tooltip" title="Delete Order">
+		        				<i class="fa fa-times"></i>
+		        			</a>
+		        		</small>
+		        	</div>
+		        	<!-- Start line_item -->
+		        	<div class="col-sm-12" ng-repeat="line_item in order.line_items track by $index">
+			            <div class="col-sm-2 less-padding">
+			            	<div class="col-xs-12 col-sm-12" style="zero-padding:0;">
+			            		<!-- <h4> <span ng-bind = 'line_item.line_item.id'></span></h4> -->
+			            		<!-- <p><span class="label" style="font-size:13px;">00640</span></p> -->
+			            	</div>
+			            	<div class="col-xs-12 col-sm-12 less-padding">
+			            		<img alt="image" class="m-t-xs" ng-src="{{line_item.main_fabric_image}}">
+			            	</div>
+			            </div>
+			            <div class="col-sm-10 col-md-10 less-padding desc">
+			                <div class="col-sm-6 less-padding">
+			                	<p>
+			                		<span class="label">Shipped to Customer</span>
+			                	</p>
+			                    <div class="">
+				                    <dl class="small m-b-none">
+				                        <dd>Description</dd>
+				                        <dt>
+				                        	<h4 class="text-navy">1112/01 - New Lyon Melange -Gray Zigzag</h4>
+				                        </dt>
+				                    </dl>
+				                </div>		                    
+			                    <div class="flex-element">
+				                    <dl class="small m-b-none">
+				                        <dd>Cust</dd>
+				                        <dt><h4>3/24/16</h4></dt>
+				                    </dl>
+				                    <dl class="small m-b-none">
+				                        <dd>Account</dd>
+				                        <dt><h4>3/24/16</h4></dt>
+				                    </dl>
+				                    <dl class="small m-b-none">
+				                        <dd>Submit</dd>
+				                        <dt><h4>3/24/16</h4></dt>
+				                    </dl>
+				                    <dl class="small m-b-none">
+				                        <dd>Shp</dd>
+				                        <dt><h4>3/24/16</h4></dt>
+				                    </dl>
+				                </div>
+			                    <div class="m-t-sm">
+			                        <a ui-sref="dashboards.order.new.line_item.fabrics_features" class="text-muted"><i class="fa fa-pencil"></i> 
+			                            Edit
+			                        </a>
+			                        |
+			                        <a class="text-muted" ng-click = "deleteLineItem(line_item.line_item.id)"><i class="fa fa-trash"></i> 
+			                            Remove item
+			                        </a>
+			                    </div>                                  
+			                </div>
+			                <div class="col-sm-6 less-padding ">
+			                    <div class="table-responsive">
+			                        <table class="custom-table borderless">			                        	
+			                        	<tr ng-repeat="feature_configuration in line_item.feature_configurations track by $index">
+			                        		<td> 
+			                        			{{feature_configuration.code}} [{{feature_configuration.name}}]
+			                        		</td>
+			                        	</tr>
+			                        </table>
+			                    </div>
+			                </div>
+			            </div>
+		        	</div>
+		        	<!-- End line_item -->
+		        </div>
+		    </div>
+		    <!-- End Order -->
+		</div>		
+	</div>
+</div>
+
+ 

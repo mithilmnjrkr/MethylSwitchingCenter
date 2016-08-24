@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'pry'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'simple_form', '~> 3.1.0.rc1'
 gem 'fontawesome-rails-cdn', '~> 4.0.3'

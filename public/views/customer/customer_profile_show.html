@@ -1,0 +1,29 @@
+<div class="ibox "  ng-init = "getDetailedProfileHistory();">
+    <div class="ibox-title none-border">
+        <h5>Profile Name : <span ng-bind = 'profile.name'></span> </h5>
+    </div>
+    <div class="ibox-content">
+        <div class="project-list">
+
+            <table class="table table-hover">
+                <tbody>                        
+                    <tr ng-repeat="detailed_profile in detailed_profiles track by $index">
+                        <td class="project-status">
+                            
+                        </td>
+                        <td class="project-title">
+                            <a ng-bind = 'detailed_profile.version'></a>
+                        </td>
+                        <td class="project-people">
+                            <a ng-bind = 'detailed_profile.notes'></a>
+                        </td>
+                        <td class="project-actions">
+                            <a class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                            <a class="btn btn-white btn-sm"><i class="fa fa-times"></i> Delete </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

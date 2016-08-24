@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="80px" height="80px" viewBox="0 0 80 80" style="enable-background:new 0 0 80 80;" xml:space="preserve">
+<path style="opacity:0.35;" d="M76.716,38.225c0.048,0.025,0.097,0.046,0.143,0.073c-0.062-0.04-0.129-0.083-0.192-0.125
+	c-0.138-0.143-0.309-0.256-0.512-0.33C69.936,33.818,56.246,25.05,56.246,25.05s-0.85-0.701-2.243-1.31
+	c-0.96-0.812-3.86-3.135-8.508-5.734c-5.779-3.233-12.021-6.928-12.021-6.928L3.187,26.089c0,0,3.237,3.695,7.86,6.466
+	c4.391,2.631,10.446,9.216,12.432,11.852c0.107,0.231,0.263,0.401,0.375,0.504c0.155,0.194,0.319,0.337,0.489,0.435l20.69,18.964
+	c0,0,0.618,0.27,3.315-1.425c9.363-5.461,25.508-19.398,27.588-21.708C77.135,39.849,77.206,38.803,76.716,38.225z"/>
+<path style="fill:#FFFFFF;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" d="M3.051,23.903c0,0,3.237,3.694,7.86,6.466
+	s11.098,9.931,12.716,12.24s4.393-1.617,4.393-1.617l16.415-13.856l9.79-5.273c0,0-3.085-2.81-8.865-6.043
+	c-5.779-3.233-12.022-6.928-12.022-6.928"/>
+<line style="fill:none;stroke:#939598;stroke-width:0.6239;stroke-miterlimit:10;" x1="34.263" y1="27.598" x2="17.848" y2="16.513"/>
+<line style="fill:none;stroke:#939598;stroke-width:0.6239;stroke-miterlimit:10;" x1="40.042" y1="23.903" x2="24.321" y2="12.818"/>
+<line style="fill:none;stroke:#939598;stroke-width:0.6239;stroke-miterlimit:10;" x1="45.822" y1="22.748" x2="37.268" y2="16.282"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="42.7402" y1="48.7178" x2="76.8662" y2="48.7178">
+	<stop  offset="0" style="stop-color:#D5D7D8"/>
+	<stop  offset="0.1822" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.8283" style="stop-color:#EFF0F0"/>
+	<stop  offset="1" style="stop-color:#C2C2C2"/>
+</linearGradient>
+<path style="fill:url(#SVGID_1_);stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" d="M44.897,62.124
+	c0,0,0.616,0.27,3.313-1.425c9.365-5.461,25.51-19.398,27.59-21.708c2.081-2.31,0.771-3.772-1.001-3.387
+	c-1.388-0.308-2.775-0.308-2.775-0.308l-9.71,3.772l-5.549,1.155l-2.851,3.926L42.74,56.081
+	C42.74,56.081,43.663,61.084,44.897,62.124z"/>
+<path style="fill:none;stroke:#939598;stroke-width:0.6239;stroke-miterlimit:10;" d="M45.052,59.776c0,0,2.62-1.231,6.319-3.772
+	c3.699-2.54,13.179-9.853,16.03-12.239c2.851-2.387,8.399-6.76,7.398-8.16c-0.771-1.078-1.928-1.001-1.928-1.001"/>
+<path style="fill:#FFFFFF;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" d="M23.859,42.84l21.039,19.284
+	c0,0-1.041-1.04,1.04-3.927c2.08-2.886,7.615-9.33,12.256-13.386c2.756-2.896,0.345-4.627,0.345-4.627L40.621,24.48
+	c0,0-13.062,7.043-17.225,16.512C22.818,42.147,23.859,42.84,23.859,42.84z"/>
+<g>
+	<defs>
+		<path id="SVGID_2_" d="M24.259,42.807l19.338,17.787l8.138-10.997l5.17-5.834l2.776-3.729l-6.894-0.957l-6.701-4.494
+			c0,0-6.605-6.312-8.807-6.121c-2.202,0.191-8.33,6.886-8.33,6.886S24.259,42.041,24.259,42.807z"/>
+	</defs>
+	<clipPath id="SVGID_3_">
+		<use xlink:href="#SVGID_2_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_3_);">
+		<path style="fill:none;stroke:#939598;stroke-width:0.6239;stroke-miterlimit:10;" d="M25.323,44.227c0,0,0.155-1.616,2.081-4.619
+			c2.927-5.004,10.018-9.854,10.018-9.854"/>
+		<path style="fill:none;stroke:#939598;stroke-width:0.6239;stroke-miterlimit:10;" d="M42.509,60.084c0,0-0.309-1.31,1.618-4.08
+			c2.929-4.156,7.167-8.776,10.943-11.701c1.001-0.769,1.233-1.462,1.078-2.386c-0.153-0.924-0.384-1.925-0.384-1.925"/>
+	</g>
+</g>
+<path style="fill:#FFFFFF;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" d="M34.031,27.752l16.53,11.97
+	c0,0,3.354,2.411,6.907,2.337c3.553-0.072,5.578-1.182,6.617-1.76c1.041-0.578,8.938-6.381,12.637-4.188
+	C70.903,32.341,56.11,22.864,56.11,22.864s-2.659-2.193-6.281-2.193C46.208,20.67,40.621,23.172,34.031,27.752z"/>
+<g>
+	<defs>
+		<polygon id="SVGID_4_" points="74.425,34.965 54.225,21.863 51.544,21.385 40.822,25.688 37.375,28.079 41.778,31.809 
+			51.353,38.599 56.766,40.224 62.362,39.651 68.298,36.208 		"/>
+	</defs>
+	<clipPath id="SVGID_5_">
+		<use xlink:href="#SVGID_4_"  style="overflow:visible;"/>
+	</clipPath>
+	<path style="clip-path:url(#SVGID_5_);fill:none;stroke:#939598;stroke-width:0.6239;stroke-miterlimit:10;" d="M55.687,22.595
+		c0,0-2.851-1-6.088,0.154c-3.925,1.4-10.943,5.851-10.943,5.851l13.41,9.469c0,0,2.349,1.623,4.822,1.819
+		c2.829,0.072,4.733-0.973,5.966-1.819c1.233-0.847,7.477-5.081,11.252-3.695"/>
+</g>
+<g>
+	<path style="fill:none;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" d="M51.766,26.638
+		c0.093,0.166,0.07,0.355-0.051,0.422l-3.662,2.042c-0.12,0.067-0.293-0.012-0.387-0.178l0,0c-0.092-0.166-0.069-0.355,0.052-0.422
+		l3.661-2.042C51.499,26.393,51.673,26.472,51.766,26.638L51.766,26.638z"/>
+	<g>
+		
+			<ellipse style="fill:#FFFFFF;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" cx="48.116" cy="29.26" rx="2.505" ry="1.578"/>
+		
+			<ellipse style="fill:#FFFFFF;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" cx="48.116" cy="28.875" rx="2.505" ry="1.578"/>
+		
+			<ellipse style="fill:#FFFFFF;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" cx="48.116" cy="28.491" rx="2.505" ry="1.579"/>
+		
+			<ellipse style="fill:none;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" cx="48.116" cy="28.451" rx="1.387" ry="0.731"/>
+	</g>
+</g>
+<path style="fill:none;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" d="M58.549,31.464
+	c0.092,0.167,0.068,0.355-0.051,0.423l-3.662,2.041c-0.12,0.067-0.295-0.012-0.387-0.178l0,0c-0.093-0.166-0.07-0.355,0.05-0.422
+	l3.662-2.041C58.282,31.218,58.456,31.298,58.549,31.464L58.549,31.464z"/>
+<g>
+	
+		<ellipse style="fill:#FFFFFF;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" cx="54.898" cy="34.086" rx="2.504" ry="1.579"/>
+	
+		<ellipse style="fill:#FFFFFF;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" cx="54.898" cy="33.702" rx="2.504" ry="1.578"/>
+	
+		<ellipse style="fill:#FFFFFF;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" cx="54.898" cy="33.317" rx="2.504" ry="1.578"/>
+	
+		<ellipse style="fill:none;stroke:#000000;stroke-width:0.6239;stroke-miterlimit:10;" cx="54.898" cy="33.277" rx="1.388" ry="0.73"/>
+</g>
+<rect style="fill:none;" width="80" height="80"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
