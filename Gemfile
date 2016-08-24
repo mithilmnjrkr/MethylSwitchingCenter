@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'simple_form', '~> 3.1.0.rc1'
 gem 'fontawesome-rails-cdn', '~> 4.0.3'
-
+gem 'angularjs-rails', '~> 1.5', '>= 1.5.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
